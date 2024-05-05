@@ -65,6 +65,39 @@ dfs(graph, 'A', "D")
 
 
 
-
-
 theory:
+Sure, let's break down the code you provided and then delve into explanations of DFS (Depth-First Search), BFS (Breadth-First Search), and recursive algorithms.
+
+### Code Explanation:
+
+#### BFS (Breadth-First Search):
+- The BFS function starts with a start node and a goal node.
+- It initializes an empty list called `visited` to keep track of the visited nodes and an empty queue.
+- It appends the start node to both `visited` and `queue`.
+- While the `queue` is not empty, it pops the first element (`m`) from the queue.
+- If `m` is equal to the goal node, it prints that the node is found and breaks out of the loop.
+- Otherwise, it iterates over the neighbors (`n`) of `m` in the graph. If the neighbor `n` has not been visited, it appends `n` to `visited` and `queue`.
+- Finally, it prints the BFS traversal.
+
+#### DFS (Depth-First Search):
+- The DFS function starts with a start node and a goal node.
+- It initializes an empty list called `visited` to keep track of the visited nodes and an empty stack.
+- It appends the start node to both `visited` and `stack`.
+- While the `stack` is not empty, it pops the last element (`node`) from the stack.
+- If `node` is equal to the goal node, it prints that the goal node is found and returns.
+- Otherwise, it iterates over the neighbors of `node` in the graph. If the neighbor `n` has not been visited, it appends `n` to `visited` and `stack`.
+- Finally, it prints the DFS traversal.
+
+### Theory:
+
+#### BFS (Breadth-First Search):
+BFS explores all the neighbor nodes at the present depth before moving on to the nodes at the next depth level. It starts at the root node and explores all the neighbor nodes at the present depth before moving on to the nodes at the next depth level. BFS uses a queue data structure to keep track of the nodes to be explored next. BFS is typically used for finding the shortest path on unweighted graphs.
+
+#### DFS (Depth-First Search):
+DFS explores as far as possible along each branch before backtracking. It starts at the root node and explores as far as possible along each branch before backtracking. DFS uses a stack data structure to keep track of the nodes to be explored next. DFS is typically used for topological sorting, finding connected components, and solving problems such as maze puzzles.
+
+#### Recursive Algorithms:
+Recursive algorithms are algorithms that solve a problem by solving smaller instances of the same problem. In the context of DFS and BFS, recursion can be used to implement the traversal process. In DFS, recursion is naturally integrated as it explores as far as possible along each branch before backtracking. In BFS, recursion is not as commonly used since BFS typically uses a queue data structure, but it can be implemented using recursion by simulating the queue with function calls.
+
+### Conclusion:
+BFS and DFS are fundamental algorithms in graph theory and are used extensively in various applications, such as pathfinding, network traversal, and data processing. Understanding these algorithms and their implementations provides a strong foundation for solving graph-related problems efficiently.

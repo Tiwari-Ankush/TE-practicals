@@ -1,0 +1,70 @@
+implement greedy search algo
+
+selection sort
+
+def selectionSort(arr):
+    for i in range(len(arr)):
+        min_index = i
+        for j in range(i + 1, len(arr)):
+            if arr[min_index] > arr[j]:
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+    return arr
+
+def get_user_input():
+    n = int(input("Enter the number of elements in the array: "))
+    arr = []
+    for i in range(n):
+        element = int(input("Enter element {}: ".format(i+1)))
+        arr.append(element)
+    return arr
+
+# Get user input
+arr = get_user_input()
+
+# Perform selection sort
+sorted_arr = selectionSort(arr)
+
+# Print the sorted array
+print("Sorted Array:", sorted_arr)
+
+
+
+
+
+
+
+
+job search:
+
+# Given data
+profit = [25, 50, 15, 90, 120] 
+jobs = ["Job1", "Job2", "Job3", "Job4", "Job5"] 
+deadline = [3, 2, 4, 3, 5]  
+
+# Find the maximum deadline
+max_deadline = max(deadline)
+
+# Initialize variables for slots, profit, and job schedule
+slot = [0] * (max_deadline + 1)
+total_profit = 0
+schedule = ['null'] * (max_deadline + 1)
+
+# Combine job details
+profit_jobs_deadline = list(zip(profit, jobs, deadline))
+
+# Sort jobs by deadline in descending order of profit
+profit_jobs_deadline = sorted(profit_jobs_deadline, key=lambda x: (x[2], -x[0]), reverse=True)
+
+# Job Scheduling
+for job in profit_jobs_deadline:
+    for j in range(job[2], 0, -1):  # Iterate over time slots backward from deadline
+        if slot[j] == 0:  # Check if the slot is empty
+            schedule[j] = job[1]  # Assign job to slot
+            total_profit += job[0]  # Update total profit
+            slot[j] = 1  # Mark slot as occupied
+            break
+
+# Output
+print("Jobs scheduled:", schedule[1:])  # Exclude 'null' from the output
+print("Total profit:", total_profit)

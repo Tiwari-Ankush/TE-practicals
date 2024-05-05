@@ -68,3 +68,41 @@ for job in profit_jobs_deadline:
 # Output
 print("Jobs scheduled:", schedule[1:])  # Exclude 'null' from the output
 print("Total profit:", total_profit)
+
+
+
+
+theory:
+Let's break down the provided code and then delve into explanations of greedy search algorithm, selection sort, job scheduling problem, and Prim's minimum spanning tree algorithm.
+
+### Code Explanation:
+
+#### Selection Sort:
+- The `selectionSort` function implements the selection sort algorithm to sort an array in ascending order.
+- It iterates through the array and finds the index of the minimum element from the current index to the end of the array.
+- It swaps the current element with the minimum element found.
+- This process continues until the entire array is sorted.
+
+#### Job Scheduling Problem:
+- The code solves the job scheduling problem where each job has a certain profit and deadline.
+- It sorts the jobs based on their deadline in descending order of profit.
+- Then, it iterates over each job and tries to allocate it to the latest available time slot before its deadline.
+- If a time slot is available, the job is scheduled, and its profit is added to the total profit.
+- The output includes the schedule of jobs and the total profit earned.
+
+### Theory:
+
+#### Greedy Search Algorithm:
+Greedy algorithms make decisions based on the current best option without considering the future consequences. In each step, they make the locally optimal choice with the hope that this will lead to a globally optimal solution. Greedy algorithms are simple, efficient, and easy to implement. However, they may not always produce the optimal solution for every problem.
+
+#### Selection Sort:
+Selection sort is an in-place comparison sorting algorithm that divides the input array into two parts: sorted and unsorted. It repeatedly selects the smallest (or largest) element from the unsorted part and swaps it with the first element of the unsorted part. This process continues until the entire array is sorted. Selection sort has a time complexity of O(n^2) and is not suitable for large datasets due to its quadratic time complexity.
+
+#### Job Scheduling Problem:
+The job scheduling problem involves scheduling jobs with deadlines and profits to maximize the total profit earned. Each job must be completed within its deadline, and only one job can be scheduled at a time. Greedy algorithms are commonly used to solve this problem. Sorting the jobs based on their deadlines allows us to prioritize jobs with earlier deadlines. By selecting jobs in decreasing order of profit while ensuring that their deadlines are met, we can find an optimal schedule that maximizes profit.
+
+#### Prim's Minimum Spanning Tree Algorithm:
+Prim's algorithm is a greedy algorithm used to find the minimum spanning tree (MST) of a connected, undirected graph. The minimum spanning tree is a subset of the edges of the graph that connects all the vertices together without any cycles and with the minimum possible total edge weight. Prim's algorithm starts with an arbitrary vertex and grows the minimum spanning tree one edge at a time by selecting the edge with the lowest weight that connects a vertex in the tree to a vertex outside the tree. This process continues until all vertices are included in the tree.
+
+### Conclusion:
+Greedy algorithms are efficient and often provide simple solutions to optimization problems. However, they may not always yield the optimal solution, and careful analysis is required to ensure correctness. Selection sort is a simple sorting algorithm with a quadratic time complexity, whereas Prim's algorithm efficiently finds the minimum spanning tree of a graph. Understanding these algorithms and their applications is crucial for solving a wide range of problems efficiently.

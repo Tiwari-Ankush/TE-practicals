@@ -48,3 +48,40 @@ def solve_n_queen():
 if __name__ == '__main__':
     N = int(input("Enter the value of N for N-Queen problem: "))
     solve_n_queen()
+
+
+
+theory:
+Let's start by breaking down the provided code for solving the N-Queen problem using backtracking. After that, I'll explain the theory behind constraint satisfaction problems, branch and bound method, the N-Queen problem, and graph coloring problem.
+
+### Code Explanation:
+
+1. **`print_board` function**: This function prints the N-Queen board. It iterates through each cell of the board and prints "Q" if there is a queen placed, otherwise ".", indicating an empty cell.
+
+2. **`is_safe` function**: This function checks if it's safe to place a queen at a given position `(row, col)` on the board. It checks three conditions:
+   - No other queen is present in the same row.
+   - No other queen is present in the same diagonal (both left and right diagonals).
+   - No other queen is present in the same column.
+
+3. **`solve_n_queen_util` function**: This function is a recursive backtracking function to solve the N-Queen problem. It tries to place queens column by column recursively. If it finds a safe position to place the queen in the current column, it proceeds to the next column. If it successfully places all queens, it returns True. Otherwise, it backtracks and tries different positions.
+
+4. **`solve_n_queen` function**: This function initializes the chessboard and calls the `solve_n_queen_util` function to solve the N-Queen problem. If a solution exists, it prints the board with queens placed; otherwise, it prints that a solution doesn't exist.
+
+5. **Main Execution**: The main part of the code takes input for the value of N (the size of the chessboard), and then calls the `solve_n_queen` function to solve the N-Queen problem.
+
+### Theory:
+
+#### Constraint Satisfaction Problem (CSP):
+Constraint Satisfaction Problem (CSP) is a problem-solving paradigm where the goal is to find a solution that satisfies a set of constraints. CSPs are represented by a set of variables, each with a domain of possible values, and a set of constraints that restrict the possible combinations of values for the variables. The goal is to find an assignment of values to variables that satisfies all the constraints.
+
+#### Backtracking:
+Backtracking is a systematic method to search for solutions to problems by trying different possibilities incrementally and abandoning a partial solution if it's determined that it cannot lead to a valid solution. Backtracking is often used to solve constraint satisfaction problems, where the goal is to find a valid assignment of values to variables.
+
+#### N-Queen Problem:
+The N-Queen problem is a classic problem in combinatorial optimization and constraint satisfaction. The objective is to place N queens on an NxN chessboard such that no two queens threaten each other. In other words, no two queens should share the same row, column, or diagonal.
+
+#### Graph Coloring Problem:
+The graph coloring problem is another classic problem in computer science and graph theory. Given an undirected graph, the goal is to assign colors to the vertices of the graph in such a way that no two adjacent vertices share the same color while using the fewest possible colors. This problem can be formulated as a constraint satisfaction problem.
+
+### Conclusion:
+The N-Queen problem is a specific instance of a constraint satisfaction problem, where the goal is to find a valid arrangement of queens on a chessboard. Backtracking is a common approach to solve the N-Queen problem efficiently by systematically trying different queen placements and abandoning invalid configurations. Understanding these concepts provides a foundation for solving various combinatorial optimization problems efficiently.

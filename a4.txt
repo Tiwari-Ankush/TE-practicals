@@ -1,0 +1,50 @@
+N queen problem
+
+implement solution for csp using branch and bound and backtracking for n queens  or a graph coloring problem
+
+
+
+
+def print_board(board):
+    for i in range(N):
+        for j in range(N):
+            if board[i][j] == 1:
+                print("Q", end=" ")
+            else:
+                print(".", end=" ")
+        print()
+
+def is_safe(board, row, col):
+    for i in range(col):
+        if board[row][i] == 1:
+            return False
+    for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
+        if board[i][j] == 1:
+            return False
+    for i, j in zip(range(row, N, 1), range(col, -1, -1)):
+        if board[i][j] == 1:
+            return False
+    return True
+
+def solve_n_queen_util(board, col):
+    if col >= N:
+        return True
+    for i in range(N):
+        if is_safe(board, i, col):
+            board[i][col] = 1
+            if solve_n_queen_util(board, col + 1):
+                return True
+            board[i][col] = 0
+    return False
+
+def solve_n_queen():
+    board = [[0]*N for _ in range(N)]
+    if not solve_n_queen_util(board, 0):
+        print("Solution does not exist")
+        return False
+    print_board(board)
+    return True
+
+if __name__ == '__main__':
+    N = int(input("Enter the value of N for N-Queen problem: "))
+    solve_n_queen()

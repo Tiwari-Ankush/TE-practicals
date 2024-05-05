@@ -113,3 +113,49 @@ def run_expert_system():
 
 if __name__ == "__main__":
     run_expert_system()
+
+
+
+theory:
+Let's break down each system provided and then delve into the theory behind expert systems, including examples and components.
+
+### 1. Employee Performance Expert System:
+
+#### Code Explanation:
+- **Rules Definition**: The `rules` dictionary defines rules for evaluating employee performance.
+- **`evaluate_employee_performance` Function**: This function evaluates employee performance based on specific criteria and assigns a score accordingly.
+- **`generate_report` Function**: This function generates a performance report for all employees based on their scores.
+- **`identify_top_performers` Function**: This function identifies the top performers based on their scores and prints their names.
+- **`input_employee_data` Function**: This function takes input for employee data, including whether they meet deadlines, exceed expectations, take initiative, have absences, or perform below expectations.
+- **Main Function**: The `main` function orchestrates the entire process, including printing rules, inputting employee data, generating reports, and identifying top performers.
+
+#### Theory:
+- **Expert System**: An expert system is a computer program designed to emulate the decision-making ability of a human expert in a specific domain. It uses knowledge stored in a knowledge base and inference mechanisms to provide expert-level advice or solutions to problems.
+- **Popular Examples**: Some popular examples of expert systems include MYCIN (medical diagnosis), DENDRAL (organic chemistry), XCON (configuration of computer systems), and PROSPECTOR (mineral exploration).
+- **Components**:
+  - **Knowledge Base**: Contains information, rules, and heuristics related to the domain.
+  - **Inference Engine**: Processes the information in the knowledge base to derive conclusions or make decisions.
+  - **User Interface**: Allows interaction between the user and the expert system.
+  - **Explanation Facility**: Provides explanations for the system's decisions or recommendations.
+  - **Knowledge Acquisition System**: Facilitates the acquisition and updating of knowledge in the system.
+
+### 2. Stock Market Trading Expert System:
+
+#### Code Explanation:
+- **Rules Definition**: The `get_rules` function defines rules for stock market trading.
+- **`evaluate_market` Function**: This function evaluates the stock market based on price trend and volume trend and provides a recommendation (Buy, Sell, or Hold).
+- **`get_user_input` Function**: This function takes user input for price trend and volume trend.
+- **`run_expert_system` Function**: This function runs the expert system, prints rules, takes user input, evaluates the market, and provides a recommendation.
+
+#### Theory:
+- **Expert System**: Same as explained earlier, an expert system is a computer program designed to provide expert-level advice or solutions in a specific domain.
+- **Popular Examples**: Expert systems are widely used in various domains, including finance, healthcare, engineering, and customer service. Examples include financial advisory systems, medical diagnosis systems, fault diagnosis systems, and customer support systems.
+- **Components**:
+  - **Knowledge Base**: Contains information, rules, and heuristics related to stock market trading.
+  - **Inference Engine**: Processes the information in the knowledge base to make trading recommendations.
+  - **User Interface**: Allows traders to interact with the system and receive recommendations.
+  - **Explanation Facility**: Provides explanations for trading recommendations and market trends.
+  - **Knowledge Acquisition System**: Enables the system to learn from historical data and update its knowledge base.
+
+### Conclusion:
+Expert systems are valuable tools that leverage artificial intelligence and domain-specific knowledge to provide expert-level advice or solutions in various domains. They are widely used across industries to improve decision-making, enhance productivity, and solve complex problems efficiently.

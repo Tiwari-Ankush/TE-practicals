@@ -120,3 +120,38 @@ def main():
         eightPuzzle(start, final)
 
 main()
+
+
+
+theory;
+Let's start by breaking down the code provided and then dive into the explanation of the A* algorithm and its application in game search problems.
+
+### Code Explanation:
+
+- The code provided implements the A* algorithm for solving the 8-puzzle problem, a classic problem in artificial intelligence and puzzle-solving.
+- The `findposofblank` function finds the position of the blank tile (-1) in the puzzle grid.
+- There are four move functions (`move_left`, `move_right`, `move_up`, `move_down`) which simulate moving the blank tile in different directions (left, right, up, down).
+- The `gn` function calculates the heuristic cost, which is the count of misplaced tiles in the current state compared to the final state.
+- The `eightPuzzle` function implements the A* algorithm. It iterates until the initial state matches the final state. In each iteration, it explores possible moves and selects the one with the minimum total cost (g(n) + h(n)), where g(n) is the actual cost from the initial state to the current state, and h(n) is the heuristic cost.
+- The main function takes input for the initial and final states of the puzzle and then calls the `eightPuzzle` function to solve it.
+
+### Theory:
+
+#### A* Algorithm:
+A* is a widely used graph traversal and pathfinding algorithm that efficiently finds the lowest-cost path from a given initial state to a goal state. It combines the advantages of both uniform-cost search and greedy best-first search by using a heuristic function to estimate the cost from the current state to the goal.
+
+In A*:
+
+- g(n): The actual cost from the initial state to the current state.
+- h(n): The heuristic cost, which is an estimate of the cost from the current state to the goal state.
+- f(n) = g(n) + h(n): The total estimated cost from the initial state through the current state to the goal state.
+
+A* maintains a priority queue of states to be explored and expands the state with the lowest f(n) value first. It continues until it reaches the goal state or exhausts all possible states.
+
+#### Application in Game Search (8-Puzzle Problem):
+The 8-puzzle problem is a popular example of using the A* algorithm in game search. In this problem, there is a 3x3 grid with 8 tiles numbered 1 to 8 and one blank space. The goal is to rearrange the tiles from a given initial state to a specified final state using the minimum number of moves.
+
+A* with an appropriate heuristic function efficiently solves the 8-puzzle problem by exploring possible moves from the current state and selecting the one with the lowest total cost. The heuristic function typically estimates the number of misplaced tiles or the Manhattan distance (sum of distances of tiles from their goal positions) as the heuristic cost.
+
+### Conclusion:
+The A* algorithm is a powerful search algorithm commonly used in various applications, including pathfinding, puzzle-solving, and game AI. Understanding its principles and implementation allows solving complex problems efficiently, making it a fundamental tool in the field of artificial intelligence and computer science.

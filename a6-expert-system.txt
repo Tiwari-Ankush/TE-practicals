@@ -1,0 +1,115 @@
+1. employee perrformance evaluation
+
+# Define the rules for evaluating employee performance
+rules = {
+    "rule1": "If the employee meets all project deadlines, add 20 points to their score.",
+    "rule2": "If the employee consistently exceeds expectations, add 30 points to their score.",
+    "rule3": "If the employee shows initiative and takes on additional responsibilities, add 15 points to their score.",
+    "rule4": "If the employee is frequently absent or misses deadlines, subtract 25 points from their score.",
+    "rule5": "If the employee consistently performs below expectations, subtract 35 points from their score."
+}
+
+# Function to evaluate employee performance based on given criteria
+def evaluate_employee_performance(deadlines_met, expectations_exceeded, initiative_taken, absences, performance_below_expectations):
+    score = 0
+    if deadlines_met:
+        score += 20
+    if expectations_exceeded:
+        score += 30
+    if initiative_taken:
+        score += 15
+    if absences:
+        score -= 25
+    if performance_below_expectations:
+        score -= 35
+    return score
+
+# Function to generate performance report for all employees
+def generate_report(employee_data):
+    print("\nEmployee Performance Report:")
+    for name, data in employee_data.items():
+        score = evaluate_employee_performance(data["deadlines_met"], data["expectations_exceeded"], data["initiative_taken"], data["absences"], data["performance_below_expectations"])
+        print(f"Employee {name} scored {score} points")
+
+# Function to identify top performers based on their scores
+def identify_top_performers(employee_data):
+    sorted_employees = sorted(employee_data.items(), key=lambda x: evaluate_employee_performance(x[1]["deadlines_met"], x[1]["expectations_exceeded"], x[1]["initiative_taken"], x[1]["absences"], x[1]["performance_below_expectations"]), reverse=True)
+    print("\nTop Performers:")
+    for name, data in sorted_employees[:3]:  # Top 3 performers
+        score = evaluate_employee_performance(data["deadlines_met"], data["expectations_exceeded"], data["initiative_taken"], data["absences"], data["performance_below_expectations"])
+        print(f"Employee {name} - Score: {score}")
+
+# Function to input employee data
+def input_employee_data():
+    employee_data = {}
+    n = int(input("Enter the number of employees you want to evaluate: "))
+    for i in range(0, n):
+        name = input("Enter the name of the employee: ")
+        data = {
+            "deadlines_met": bool(int(input("Enter '1' if the employee meets project deadlines, otherwise enter '0': "))),
+            "expectations_exceeded": bool(int(input("Enter '1' if the employee consistently exceeds expectations, otherwise enter '0': "))),
+            "initiative_taken": bool(int(input("Enter '1' if the employee takes initiative, otherwise enter '0': "))),
+            "absences": bool(int(input("Enter '1' if the employee is frequently absent, otherwise enter '0': "))),
+            "performance_below_expectations": bool(int(input("Enter '1' if the employee consistently performs below expectations, otherwise enter '0': ")))
+        }
+        employee_data[name] = data
+    return employee_data
+
+# Main function to run the code
+def main():
+    print("\nEmployee Evaluation Expert system:")
+    print("\nRules for employee evaluation:")
+    for key, rule in rules.items():
+        print(f"{key}: {rule}")
+    employee_data = input_employee_data()
+    generate_report(employee_data)
+    identify_top_performers(employee_data)
+
+# Execute the main function if this script is run
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+2. stock market 
+def get_rules():
+    rules = {
+        "rule1": "If the stock price is increasing for the past 3 days, buy.",
+        "rule2": "If the stock price is decreasing for the past 3 days, sell.",
+        "rule3": "If the stock price is stable for the past 3 days, hold.",
+        "rule4": "If the volume of trade is significantly higher than usual, buy.",
+        "rule5": "If the volume of trade is significantly lower than usual, sell."
+    }
+    return rules
+
+def evaluate_market(price_trend, volume_trend):
+    if price_trend == "increasing" and volume_trend == "high":
+        return "Buy"
+    elif price_trend == "decreasing" and volume_trend == "low":
+        return "Sell"
+    else:
+        return "Hold"
+
+def get_user_input():
+    price_trend = input("Enter the price trend (increasing/decreasing/stable): ").lower()
+    volume_trend = input("Enter the volume trend (high/low): ").lower()
+    return price_trend, volume_trend
+
+def run_expert_system():
+    print("Welcome to the Stock Market Trading Expert System!")
+    rules = get_rules()
+    print("Rules for stock market trading:")
+    for key, rule in rules.items():
+        print(f"{key}: {rule}")
+
+    price_trend, volume_trend = get_user_input()
+    recommendation = evaluate_market(price_trend, volume_trend)
+    print(f"Recommendation: {recommendation}")
+
+
+if __name__ == "__main__":
+    run_expert_system()

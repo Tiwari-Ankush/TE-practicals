@@ -1,0 +1,62 @@
+
+install and configure gcloud sdk
+
+
+
+
+https://cloud.google.com/products/compute/?utm_source=bing&utm_medium=cpc&utm_campaign=japac-IN-all-en-dr-bkws-all-all-trial-e-dr-1009882&utm_content=text-ad-none-none-DEV_c-CRE_-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt+~+Compute_Compute+Engine_gcp+cloud+computing_main-KWID_43700079460946534-kwd-71812651502810:loc-90&userloc_150028-network_o&utm_term=KW_cloud%20compute%20google&gclid=4824d92e7a541800c0f2bf164606512c&gclsrc=3p.ds&
+
+
+
+
+login account to edge 
+cloud.google.com/sdk/docs/install
+windows>> 
+
+
+
+gcloud
+it will not work then,>> 
+
+close powershell and again open pow 
+>> gcloud init
+>>gcloud init --console-only 
+
+provide email id
+
+follow link and paste it into browser 
+
+
+
+
+
+
+
+
+
+next video 
+This command will explain how to create virtual machines in google cloud using gcloud commands
+
+gcloud auth login --no-launch-browser
+gcloud compute instances create instance-1  --machine-type=e2-micro --zone=us-central1-b  --preemptible --no-restart-on-failure  --maintenance-policy=terminate  --image-family=rhel-8 --image-project=rhel-cloud
+
+gcloud compute instances list
+
+https://cloud.google.com/ai-platform/...
+gcloud compute instances describe instance-1
+gcloud compute ssh instance-1
+
+Stop Instance: -
+gcloud compute instances stop instance-1
+Start instance :-
+gcloud compute instances start instance-1
+
+Delete instance :-
+gcloud compute instances delete instance-1
+
+
+
+
+
+
+gcloud auth login --no-launch-browser

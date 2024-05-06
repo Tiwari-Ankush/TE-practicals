@@ -1,0 +1,29 @@
+codes
+public class Ankush {
+    public void CreateAccount(String Name, String Phone) {
+        Account acc = new Account();
+        acc.Name = Name;
+        acc.Phone = Phone;
+        insert acc;
+        System.debug('Account has been created with Name: ' + Name + ' and Phone: ' + Phone);
+    }
+}
+
+ public class Ankush2{
+
+    public void DeleteAccountByPhone(String phone) {
+        List<Account> accountsToDelete = [SELECT Id FROM Account WHERE Phone = :phone];
+        if(!accountsToDelete.isEmpty()) {
+            delete accountsToDelete;
+            System.debug(accountsToDelete.size() + ' account(s) with Phone number ' + phone + ' have been deleted successfully.');
+        } else {
+            System.debug('No account found with Phone number ' + phone);
+        }
+    }
+ }   
+
+
+
+for executing
+Ankush acc = new Ankush ();
+acc,CreateAccount('sample account','8645131616');

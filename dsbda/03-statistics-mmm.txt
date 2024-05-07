@@ -1,3 +1,7 @@
+
+https://www.kaggle.com/datasets/tiwariankush/statistics-mmm
+
+
 Descriptive Statistics - Measures of Central Tendency and variability
 1. Perform the following statistics (mean, median, minimum, maximum, standard deviation) for the provided summary statistics on any open source dataset (e.g., data.csv)
    - Categorize (age, income etc.) with numeric variables grouped by one of the qualitative data variable available. For example, if your categorical variable is age groups and quantitative variables is income, then provide summary statistics of income grouped by the age group. Create a list that contains a numeric value for each response to the quantitative variable.

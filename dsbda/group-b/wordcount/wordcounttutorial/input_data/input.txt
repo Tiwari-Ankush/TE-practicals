@@ -1,0 +1,8 @@
+WordCount example reads text files and counts how often words occur. The input is text files, and the output is text
+files, each line of which contains a word and the count of how often it occurred, separated by a tab.
+Map Reduce Project that works on weather data and process it, the final outcome of the project can be processed
+further to find similarities on different weather stations
+The Shadow was an American pulp magazine published by Street & Smith from 1931 to 1949. Each issue contained a
+novel about The Shadow, a mysterious crime-fighting figure who spoke the line "Who knows what evil lurks in the
+hearts of men? The Shadow knows" in radio broadcasts of stories from Street & Smith's Detective Story Magazine.
+For the first issue, dated April 1931, Walter Gibson wrote the lead novel

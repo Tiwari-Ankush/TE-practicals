@@ -1,3 +1,7 @@
+
+https://www.kaggle.com/datasets/tiwariankush/text-analysis
+
+
 TEXT SNSLYDID
 
 1. Extract a sample document and apply the following document preprocessing methods: Tokenization, POS tagging, stop words removal, Stemming and Lemmatization.

@@ -1,0 +1,14 @@
+
+Data Wrangling, I
+Perform the following required operations on any open source dataset (e.g., data.csv)
+
+1. Import all operations using Python Libraries.
+2. Locate an open source data from the web (e.g. [1](https://bing.com/search?q=)). Provide a clear description of the data and its source (i.e., URL of the web site).
+3. Load the Dataset into pandas dataframe.
+4. Data Preprocessing: check for missing values in the data using pandas Insult(), describe() function to get some initial statistics. Provide valuable descriptions types of variables etc.
+5. Data Formatting and Data Normalization: Summarize types of variables by checking each checkmark dimension of the data frame.
+6. Check the types of variables are numeric, integer type, factor type conversions) in addition to codes and outputs into qualitative variables in Python.
+In turn categorical variables, explain every operation that you do in above steps and explain everything that you do to import/read/scrape the data set.
+
+
+

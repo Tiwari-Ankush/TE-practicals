@@ -1,0 +1,4 @@
+data analytics III 
+
+1. Implement a Simple Naïve Bayes classification algorithm using Python/R on iris.csv dataset.
+2. Compute a Confusion matrix to find TP (True Positive), FP (False Positive), TN (True Negative), FN (False Negative), Accuracy, Error rate, Precision, Recall on the given dataset.

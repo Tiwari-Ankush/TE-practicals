@@ -1,0 +1,7 @@
+data visualization III
+Data Visualization III
+Download the Iris flower dataset or any other dataset into a DataFrame (e.g., [URL] ). Scan the dataset and give the inference as:
+1. List down the features and their types (e.g., numeric, nominal) available in the dataset.
+2. Create a histogram for each feature in the dataset to illustrate the feature distributions.
+3. Create a box plot for each feature in the dataset.
+4. Compare distributions and identify outliers.

@@ -1,0 +1,4 @@
+TEXT SNSLYDID
+
+1. Extract a sample document and apply the following document preprocessing methods: Tokenization, POS tagging, stop words removal, Stemming and Lemmatization.
+2. Create a representation of a document by calculating Term Frequency and Inverse Document Frequency.
